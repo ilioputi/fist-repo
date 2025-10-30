@@ -17,4 +17,16 @@ function withdrawMoney() {
         console.log(`Успешно снято ${amount} рублей.`);  
         showBalance();  
     }  
-}  
+}
+function depositMoney() {  
+    let amount = parseInt(prompt("Введите сумму для пополнения:"));  
+      
+    if (isNaN(amount) || amount <= 0) {  
+        console.log("Некорректная сумма!");  
+        return;  
+    }  
+      
+    balance += amount;  
+    console.log(`Успешно внесено ${amount} рублей.`);  
+    showBalance();  
+}    
